@@ -1,4 +1,5 @@
 # dynamodb-crud operation
+create
 ![image](https://github.com/saravanan2k03/dynamodb-crud/assets/112747138/d68f32dc-ae0b-4786-8912-1337d4d2a7e7)
 
 ![image](https://github.com/saravanan2k03/dynamodb-crud/assets/112747138/b45813c5-0ce3-499e-b859-1f5fbb60b663)
