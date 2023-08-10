@@ -5,8 +5,8 @@ const dynamodb = require('../config')
 
 
 route.post('/Todo', (req, res) => {
-    let Todo = {
-        Id: { N: req.body.id },
+    let product = {
+        ProductId: { N: req.body.id },
         TaskName: { S: req.body.name },
         Department:{S: req.body.department},
         Assign: { N: req.body.assign },
@@ -15,8 +15,8 @@ route.post('/Todo', (req, res) => {
 
     };
     const params = {
-        TableName: "Todist",
-        Item: Todo
+        TableName: "Todo",
+        Item: product
     };
     dynamodb.putItem(params, (err) => {
         if (err) {
