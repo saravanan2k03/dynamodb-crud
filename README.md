@@ -1,1 +1,1 @@
-# dynamodb-crud
+# dynamodb-crud operation
