@@ -5,18 +5,18 @@ const dynamodb = require('../config')
 
 
 route.delete('/Todo/:id', (req, res) => {
-    const productId = req.params.id;
+    const Id = req.params.id;
     const params = {
-        TableName: "Todo",
+        TableName: "Todist",
         Key: {
-            ProductId: { N: productId }
+            Id: { N: Id }
         }
     };
     dynamodb.deleteItem(params, (err) => {
         if (err) {
             res.json(err);
         }
-        res.json(`Successfully Deleted Task ${productId}`);
+        res.json(`Task Deleted `);
     });
 });
 

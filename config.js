@@ -6,14 +6,14 @@ aws.config.update({
 });
 var dynamodb = new aws.DynamoDB();
 // var params = {
-//     TableName : "Products",
+//     TableName : "Todist",
 //     KeySchema: [
-//         { AttributeName: "ProductId", KeyType: "HASH"},
+//         { AttributeName: "Id", KeyType: "HASH"},
         
 
 // ],
 //     AttributeDefinitions: [
-//         { AttributeName: "ProductId", AttributeType: "N" },
+//         { AttributeName: "Id", AttributeType: "N" },
         
 // ],
 //     ProvisionedThroughput: {

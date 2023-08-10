@@ -4,21 +4,24 @@ const dynamodb = require('../config')
 
 
 route.put('/Todo/:id', (req, res) => {
-    const productId = req.params.id;
-    let product = {
-        ProductId: { N: productId },
+    const Ids = req.params.id;
+    let Todo = {
+        Id: { N: Ids },
         TaskName: { S: req.body.name },
-        Assign: { N: req.body.assign }
+        Department:{S: req.body.department},
+        Assign: { N: req.body.assign },
+        Assignby: { N: req.body.assignby },
+
     };
     const params = {
-        TableName: "Todo",
-        Item: product
+        TableName: "Todist",
+        Item: Todo
     };
     dynamodb.putItem(params, (err) => {
         if (err) {
             res.json(err);
         }
-        res.json(`Successfully Updated Task ${productId}`);
+        res.json(`Task Updated successfully`);
     });
 });
 

@@ -5,7 +5,7 @@ const dynamodb = require('../config')
 
 route.get('/Todo', (req, res) => {
     const params = {
-        TableName: "Todo", 
+        TableName: "Todist", 
     };
     dynamodb.scan(params, (err, data) => {
         if (err) {
